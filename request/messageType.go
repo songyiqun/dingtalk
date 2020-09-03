@@ -92,11 +92,13 @@ type ActionCardMessage_2_BtnJsonList struct {
 }
 
 type ActionCardMessage_2 struct {
-	MsgType    string `json:"msgtype"`
-	ActionCard struct {
-		Title          string                            `json:"title"`
-		Markdown       string                            `json:"markdown"`
-		BtnOrientation string                            `json:"btn_orientation"`
-		BtnJsonList    []ActionCardMessage_2_BtnJsonList `json:"btn_json_list"`
-	} `json:"action_card"`
+	MsgType    string                         `json:"msgtype"`
+	ActionCard ActionCardMessage_2_ActionCard `json:"action_card"`
+}
+
+type ActionCardMessage_2_ActionCard struct {
+	Title          string                            `json:"title"`
+	Markdown       string                            `json:"markdown"`
+	BtnOrientation string                            `json:"btn_orientation"`
+	BtnJsonList    []ActionCardMessage_2_BtnJsonList `json:"btn_json_list"`
 }
