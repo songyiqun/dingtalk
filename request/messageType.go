@@ -92,8 +92,8 @@ type ActionCardMessage_2_BtnJsonList struct {
 }
 
 type ActionCardMessage_2 struct {
-	MsgType    string `json:"msgtype"`
-	ActionCard ActionCardMessage_2_ActionCard  `json:"action_card"`
+	MsgType    string                         `json:"msgtype"`
+	ActionCard ActionCardMessage_2_ActionCard `json:"action_card"`
 }
 
 type ActionCardMessage_2_ActionCard struct {
